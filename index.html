@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EBEE-BHAI | WHO IS HE?</title>
+    <meta name="description" content="EBEE BHAI A 16 Year Boy Doing Things Beyond People Thinking Who Is He? Where He Is From? Why He Is Doing This?...">
+    <link rel="shortcut icon" type="image/jpeg" href="image.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #14151a;
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #0a0a0e;
+            padding: 20px;
+            text-align: center;
+            animation: slideInDown 1s ease;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #64dfdf;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #8be9fd;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        section {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #8be9fd;
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #bd93f9;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #f8f8f2;
+        }
+
+        .project {
+            background-color: #0a0a0e;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .project a {
+            color: #50fa7b;
+        }
+
+        footer {
+            background-color: #0a0a0e;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Keyframe animations */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight / 1.3;
+                if (sectionPosition < screenHeight) {
+                    section.style.animation = 'fadeIn 1s ease forwards';
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to EBEE-BHAI's Portfolio</h1>
+        <p>A 16-Year-Old Doing Things Beyond Expectations</p>
+    <p>Scroll To Know More...</p>
+          </header>
+    <main>
+        <section id="intro">
+            <div class="container">
+                <h2>EBEE-BHAI: WHO IS HE?</h2>
+                <p>EBEE BHAI is a 16-year-old Pakistani cybersecurity expert and entrepreneur, renowned for his exceptional skills in ethical hacking and digital marketing...</p>
+            </div>
+        </section>
+        <section id="organization">
+            <div class="container">
+                <h2>About EBEE-BHAI</h2>
+                <p>EBEE BHAI, a 16-year-old phenomenon, is redefining the cybersecurity landscape with his innovative approach and unparalleled expertise...</p>
+            </div>
+        </section>
+        <section id="atom-cyberforce">
+            <div class="container">
+                <h2>About AtomCyberForce (ACF)</h2>
+                <p>EBEE BHAI founded AtomCyberForce (ACF), a leading cybersecurity organization dedicated to helping lower class to learn from the power from the tech world</p>
+          <p>Visit To Know More About AtomCyberForce (https://atomcyberforcei.netlify.app)</p>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="project">
+                    <h3>Project Title 1</h3>
+                    <p><a href="#">Project URL 1</a></p>
+                </div>
+                <div class="project">
+                    <h3>Project Title 2</h3>
+                    <p><a href="#">Project URL 2</a></p>
+                </div>
+                <!-- Add more projects here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 EBEE-BHAI. All rights reserved.</p>
+    </footer>
+</body>
+</html>
