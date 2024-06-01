@@ -60,18 +60,21 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             color: #8be9fd;
+            text-align: center;
         }
 
         h3 {
             font-size: 1.8rem;
             margin-bottom: 10px;
             color: #bd93f9;
+            text-align: center;
         }
 
         p {
             font-size: 1.2rem;
             margin-bottom: 20px;
             color: #f8f8f2;
+            text-align: center;
         }
 
         .project {
@@ -80,10 +83,17 @@
             padding: 20px;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateX(100px);
+        }
+
+        .project:nth-child(odd) {
+            transform: translateX(-100px);
         }
 
         .project a {
             color: #50fa7b;
+            text-align: center;
         }
 
         footer {
@@ -110,6 +120,20 @@
                 transform: translateY(0);
             }
         }
+
+        @keyframes slideInLeft {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
     </style>
     <script>
         window.addEventListener('scroll', () => {
@@ -121,9 +145,23 @@
                     section.style.animation = 'fadeIn 1s ease forwards';
                 }
             });
+
+            const projects = document.querySelectorAll('.project');
+            projects.forEach((project, index) => {
+                const projectPosition = project.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight / 1.3;
+                if (projectPosition < screenHeight) {
+                    if (index % 2 === 0) {
+                        project.style.animation = 'slideInLeft 1s ease forwards';
+                    } else {
+                        project.style.animation = 'slideInRight 1s ease forwards';
+                    }
+                }
+            });
         });
     </script>
 </head>
+
 <body>
     <header>
         <h1>Welcome to EBEE-BHAI's Portfolio</h1>
@@ -154,12 +192,16 @@
             <div class="container">
                 <h2>Featured Projects</h2>
                 <div class="project">
-                    <h3>Project Title 1</h3>
-                    <p><a href="#">Project URL 1</a></p>
+                    <h3>Email Extractor</h3>
+                    <p><a href="https://github.com/EBEE-BHAI/Emailextractor">Click Me To Visit</a></p>
                 </div>
                 <div class="project">
-                    <h3>Project Title 2</h3>
-                    <p><a href="#">Project URL 2</a></p>
+                    <h3>EBEE TOOLKIT</h3>
+                    <p><a href="https://ebeetool.netlify.app">Click Me To Visit</a></p>
+                </div>
+          <div class="project">
+                    <h3>EBEE COURSES MART</h3>
+                    <p><a href="courses-mart.html">Click Me To Visit</a></p>
                 </div>
                 <!-- Add more projects here -->
             </div>
